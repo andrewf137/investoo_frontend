@@ -1,0 +1,362 @@
+// Mixins
+
+// Cross browser border radius mixin
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+// Cross browser box shadow mixin
+@mixin box-shadow($x-offset, $y-ofset, $blur, $spread, $color, $type:"") {
+    -webkit-box-shadow: #{$type} $x-offset $y-ofset $blur $spread $color;
+    -moz-box-shadow: #{$type} $x-offset $y-ofset $blur $spread $color;
+    box-shadow: #{$type} $x-offset $y-ofset $blur $spread $color;
+}
+// Cross browser custom flex mixin
+@mixin flex($flex-grow: 0, $flex-shrink: 0, $flex-basis: auto) {
+    -webkit-flex: $flex-grow $flex-shrink $flex-basis;
+    -ms-flex: $flex-grow $flex-shrink $flex-basis;
+    flex: $flex-grow $flex-shrink $flex-basis;
+}
+// Cross browser custom transform rotate
+@mixin transform-rotate($deg:0) {
+    transform: rotate($deg) ;
+    -webkit-transform: rotate($deg) ;
+    -moz-transform: rotate($deg) ;
+    -o-transform: rotate($deg) ;
+    -ms-transform: rotate($deg) ;
+}
+@mixin investoo-links {
+    &, &:hover, &:focus, &:active, &:visited {
+        font-size: 18px;
+        color: $white;
+        position: relative;
+        top: 26px;
+    }
+}
+// Global styles
+body {
+    // font-family: 'Heebo', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+// Top bar
+.top-bar .top-bar-right {
+    .login-button, .investoopro-button {
+        margin-right: 30px;
+        &, &:hover, &:focus, &:active, &:visited {
+            font-size: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
+            font-weight: 500;
+            color: $white;
+            border-color: $white;
+            border-radius: 5000px;
+            transition: color 0.15s ease-in, border-color 0.15s ease-in;
+        }
+    }
+    .signup-button {
+        margin-right: 30px;
+        &, &:hover, &:focus, &:active, &:visited {
+            background-color: $investoo-secondary-color;
+            font-size: 16px;
+            font-weight: 500;
+            color: $white;
+            @include border-radius(4px);
+        }
+    }
+    .investoopro-button {
+        padding-top: 8px;
+        padding-bottom: 4px;
+        i.fi-list {
+            float: left;
+            margin-right: 4px;
+            font-weight: bold;
+            @include border-radius(2px);
+            background-color: $investoo-secondary-color;
+            &:before {
+                @include transform-rotate(90deg);
+                margin-left: 4px;
+                margin-right: 6px;
+                font-size: 20px;
+            }
+        }
+        .investoo {
+            float: left;
+            font-size: 26px;
+            margin-right: 4px;
+            position: relative;
+            top: -3px;
+        }
+        .pro {
+            float: left;
+            color: #eea225;
+            font-size: 21px;
+            position: relative;
+            top: 1px;
+            font-weight: bold;
+        }
+    }
+    .avatar {
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        max-width: 40px;
+    }
+    @include breakpoint(small) {
+        @include flex(0, 0, auto);
+    }
+}
+.top-bar .top-bar-left {
+    .menu-text {
+        padding: 0px;
+        color: white;
+        margin-right: 20px;
+        i.fi-list {
+            float: left;
+            margin-right: 4px;
+            font-weight: bold;
+            position: relative;
+            top: 4px;
+            @include border-radius(2px);
+            background-color: $investoo-secondary-color;
+            &:before {
+                @include transform-rotate(90deg);
+                margin-left: 4px;
+                margin-right: 6px;
+                font-size: 43px;
+            }
+        }
+        .investoo {
+            float: left;
+            font-size: 56px;
+            margin-right: 4px;
+        }
+    }
+    & li a {
+        @include investoo-links;
+    }
+    @include breakpoint(small) {
+        @include flex(0, 0, auto);
+    }
+}
+
+
+// Off Canvas content
+#offCanvasLeft {
+    & li a {
+        @include investoo-links;
+    }
+}
+
+/// Header bellow top menu
+.forex-text {
+    color: #52c3aa;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.trading-courses-header {
+    background: #52c3aa;
+    padding-top: 20px;
+    .breadcrumbs li {
+        &::after {
+            font-size: 20px;
+        }
+        & a {
+            font-size: 20px;
+            &::first-letter {
+                font-size: 24px;
+            }
+        }
+    }
+    .title {
+        color: white;
+        font-size: 40px;
+    }
+    .subtitle {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+
+// Sort by text
+.sort-by {
+    margin-top: 40px;
+    @include breakpoint(medium only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(smedium only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(small only) {
+        padding-left: 10px;
+    }
+}
+
+
+// Left layout
+.left {
+    width: 20%;
+    float: left;
+    @include breakpoint(medium only) {
+        width: 30%;
+        padding-left: 10px;
+    }
+    @include breakpoint(smedium only) {
+        width: 40%;
+        padding-left: 10px;
+    }
+    @include breakpoint(small only) {
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+
+// Right layout
+.right {
+    width: 80%;
+    float: left;
+    .filterable {
+        padding: 0px 10px 0px 10px;
+    }
+    @include breakpoint(medium only) {
+        width: 70%;
+    }
+    @include breakpoint(smedium only) {
+        width: 60%;
+    }
+    @include breakpoint(small only) {
+        width: 100%;
+    }
+}
+
+
+// Filter block
+.filter-container {
+    padding: 0px 10px 0px 0px;
+    height: 310px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border: 1px solid $custom-border-color;
+    @include border-radius(4px);
+    @include box-shadow(0px, 2px, 4px, 0px, rgba(50, 50, 50, 0.75));
+    .filter-item {
+        padding: 35px 0px 0px 10px;
+        &:last-child {
+            padding-bottom: 35px;
+        }
+        &>li {
+            border: 1px solid $custom-border-color;
+            width: 100%;
+            @include border-radius(2px);
+            .is-dropdown-submenu {
+                width: 100%;
+            }
+        }
+        li a {
+            color: $custom-font-color;
+        }
+    }
+}
+
+
+// Cards styles
+.card.course {
+    height: 310px;
+    @include border-radius(4px);
+    @include box-shadow(0px, 2px, 4px, 0px, rgba(50, 50, 50, 0.75));
+    .card-img {
+        max-height: 120px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 440px;
+        }
+    }
+    .card-section {
+        height: 80px;
+        padding: 10px;
+        .course-title {
+            float: left;
+            font-size: 17px;
+            font-weight: 500;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .course-progress {
+            float: left;
+            font-size: 12px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .user-rating {
+            float: left;
+            font-size: 12px;
+            margin-top: 0px;
+            width: 100%;
+        }
+        .rate {
+            width: 100%;
+            float: left;
+            .rating {
+                float: left;
+            }
+            .user-rate {
+                margin-left: 10px;
+                float: left;
+            }
+        }
+        .progress, .progress-meter {
+            float: left;
+            width: 70%;
+            height: 7px;
+            @include border-radius(120px);
+        }
+        .progress-meter {
+            width: 30%;
+            background: $investoo-secondary-color;
+        }
+    }
+    .card-footer {
+        height: 40px;
+        width: 100%;
+        float: left;
+        background: $investoo-secondary-color;
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+        line-height: 42px;
+    }
+}
+
+
+// Rating stars styles
+.rating .rating-block {
+    padding: 1px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .rating-block-rating {
+        display: flex;
+    }
+    .star {
+        cursor: pointer;
+        stroke: $investoo-secondary-color;
+    }
+    .rating-block-rating .star.selected polygon {
+        fill: $investoo-secondary-color;
+    }
+    .rating-block-rating.is-voted .star polygon {
+        fill: $investoo-secondary-color;
+    }
+    .rating-block-rating.is-voted .star.selected ~ .star polygon {
+        fill: transparent;
+    }
+}

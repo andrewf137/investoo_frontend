@@ -1,0 +1,25 @@
+<div class="cell filterable {{filters}}">
+    <div class="card course" data-toggle="course-information-{{index}}">
+        <div class="card-img">
+            <img src="http://via.placeholder.com/360x180" />
+        </div>
+        <div class="card-section">
+            <span class="course-title">{{course-title}}</span>
+            <span class="course-progress">{{course-progress}}</span>
+            <div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+                <div class="progress-meter" style="{{progress-meter}}"></div>
+            </div>
+            <span class="user-rating">User Rating</span>
+            <div class="rate">
+                {{> star-rating}}
+                <span class="user-rate">5/5</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            Start Free Course
+        </div>
+    </div>
+</div>
+<div class="dropdown-pane top" id="course-information-{{index}}" data-dropdown>
+    Just some junk that needs to be said. Or not. Your choice.
+</div>

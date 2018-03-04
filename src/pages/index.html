@@ -1,0 +1,176 @@
+<div class="off-canvas-wrapper">
+
+    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="push">
+        <!-- Close button -->
+        <!-- <button class="close-button" aria-label="Close menu" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+        </button> -->
+        <!-- Menu -->
+        <ul class="vertical menu">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Brokers</a></li>
+            <li><a href="#">Signals</a></li>
+            <li><a href="#">Trading Room</a></li>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Investoo PRO</a></li>
+        </ul>
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+        <!-- Your page content lives here -->
+
+        <!-- Top bar for mobile -->
+        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="xlarge">
+            <div class="title-bar-left">
+                <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+                <span class="title-bar-title">Investoo</span>
+            </div>
+        </div>
+
+        <!-- Top bar for large -->
+        <div class="top-bar" id="responsive-menu">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text"><i class="fi-list"></i><span class="investoo">investoo</span></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Brokers</a></li>
+                    <li><a href="#">Signals</a></li>
+                    <li><a href="#">Trading Room</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><button type="button" class="button hollow login-button">Log In</button></li>
+                    <li><button type="button" class="button signup-button">Sign Up</button></li>
+                    <li><button type="button" class="button hollow investoopro-button"><i class="fi-list"></i><span class="investoo">investoo</span><span class="pro">PRO</span></button></li>
+                    <li><img class="avatar" src="http://via.placeholder.com/40x40" /></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Forex title container -->
+        <div class="grid-x grid-padding-x large-padding-collapse">
+            <div class="large-8 large-offset-2 cell">
+                <div class="forex-text">Forex</div>
+            </div>
+        </div>
+
+        <!-- Trading Courses and breadcrumb container -->
+        <div class="grid-container full">
+            <div class="grid-x grid-padding-x large-padding-collapse trading-courses-header">
+                <div class="large-8 large-offset-2 cell">
+                    <nav aria-label="You are here:" role="navigation">
+                        <ul class="breadcrumbs">
+                            <li><a href="#"><i class="fi-home"></i></a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Forex</a></li>
+                        </ul>
+                    </nav>
+                    <div class="title">Trading Courses</div>
+                    <div class="subtitle">Browse Courses</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main layout -->
+        <div class="grid-container full">
+            <div class="grid-x">
+                <div class="cell large-10 large-offset-1 xxlarge-8 xxlarge-offset-2">
+                    <div class="sort-by">Sort by</div>
+                    <div class="left">
+                        <div class="grid-x">
+                            <div class="cell auto filter-container">
+                                    <div class="">
+                                        <ul class="filter-item dropdown menu" data-dropdown-menu data-options="disableHover: true; clickOpen: true;">
+                                            <li class="is-dropdown-submenu-parent">
+                                                <a href="#">Skill Level</a>
+                                                <ul class="menu">
+                                                    <li><a href="#" class="filter-button" data-filter=".beginner .dadvanced .pro">All levels</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".beginner">Beginner</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".dadvanced">Advanced</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".pro">Pro</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="filter-item dropdown menu" data-dropdown-menu data-options="disableHover: true; clickOpen: true;">
+                                            <li class="is-dropdown-submenu-parent">
+                                                <a href="#">Product Type</a>
+                                                <ul class="menu">
+                                                    <li><a href="#" class="filter-button" data-filter=".forex .binary-options">All product types</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".forex">Forex</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".binary-options">Binary options</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="filter-item dropdown menu" data-dropdown-menu data-options="disableHover: true; clickOpen: true;">
+                                            <li class="is-dropdown-submenu-parent">
+                                                <a href="#">Course Type</a>
+                                                <ul class="menu">
+                                                    <li><a href="#" class="filter-button" data-filter=".course .strategy .theory">All course types</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".course">Course</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".strategy">Strategy</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".theory">Theory</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="filter-item dropdown menu" data-dropdown-menu data-options="disableHover: true; clickOpen: true;">
+                                            <li class="is-dropdown-submenu-parent">
+                                                <a href="#">Course Length</a>
+                                                <ul class="menu">
+                                                    <li><a href="#" class="filter-button" data-filter=".lt-6h .6h-12h .12h-18h .18h-24h .gt-24h">All course lengths</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".lt-6h">< 6h</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".6h-12h">6h - 12h</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".12h-18h">12h - 18h</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".18h-24h">18h - 24h</a></li>
+                                                    <li><a href="#" class="filter-button" data-filter=".gt-24h">> 24h</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="grid-x small-up-1 medium-up-2 large-up-3 xlarge-up-3 xlarge-up-4 container">
+                            {{> card-course index='01' filters='beginner forex strategy 6h-12h' course-title='Forex Beginners Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='02' filters='advanced forex course lt-6h' course-title='Forex Advanced Course' course-progress='320% Completed' progress-meter='width: 32%;'}}
+                            {{> card-course index='03' filters='advanced binary-options course 12h-18h' course-title='Forex Advanced Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='04' filters='beginner forex course 18h-24h' course-title='Forex Beginners Course' course-progress='40% Completed' progress-meter='width: 40%;'}}
+                            {{> card-course index='05' filters='beginner binary-options course lt-6h' course-title='Forex Beginners Course' course-progress='60% Completed' progress-meter='width: 60%;'}}
+                            {{> card-course index='06' filters='beginner forex theory 6h-12h' course-title='Forex Beginners Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='07' filters='pro forex strategy 6h-12h' course-title='Forex Pro Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='08' filters='pro binary-options strategy lt-6h' course-title='Forex Pro Course' course-progress='10% Completed' progress-meter='width: 10%;'}}
+                            {{> card-course index='09' filters='beginner forex course 18h-24h' course-title='Forex Beginners Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='10' filters='beginner binary-options strategy 12h-18h' course-title='Forex Beginners Course' course-progress='25% Completed' progress-meter='width: 25%;'}}
+                            {{> card-course index='11' filters='pro forex strategy 6h-12h' course-title='Forex Pro Course' course-progress='70% Completed' progress-meter='width: 70%;'}}
+                            {{> card-course index='12' filters='advanced forex course 12h-18h' course-title='Forex Advanced Course' course-progress='80% Completed' progress-meter='width: 80%;'}}
+                            {{> card-course index='13' filters='pro forex strategy 6h-12h' course-title='Forex Pro Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='14' filters='beginner forex theory 18h-24h' course-title='Forex Beginners Course' course-progress='90% Completed' progress-meter='width: 90%;'}}
+                            {{> card-course index='15' filters='advanced binary-options strategy lt-6h' course-title='Forex Advanced Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='16' filters='beginner forex course 12h-18h' course-title='Forex Beginners Course' course-progress='100% Completed' progress-meter='width: 100%;'}}
+                            {{> card-course index='17' filters='advanced forex theory gt-24h' course-title='Forex Advanced Course' course-progress='50% Completed' progress-meter='width: 50%;'}}
+                            {{> card-course index='18' filters='beginner binary-options strategy 6h-12h' course-title='Forex Beginners Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='19' filters='advanced forex strategy 12h-18h' course-title='Forex Advanced Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                            {{> card-course index='20' filters='beginner forex course 6h-12h' course-title='Forex Beginners Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main layout -->
+        <div class="grid-container full">
+            <div class="grid-x">
+                <div class="cell large-10 large-offset-1 xxlarge-8 xxlarge-offset-2">
+                    <div class="footer">
+                        hi!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
