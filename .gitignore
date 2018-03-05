@@ -4,3 +4,7 @@ npm-debug.log
 bower_components
 dist
 *.swp
+*.sublime-project
+*.sublime-workspace
+package-lock.json
+.idea
