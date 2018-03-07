@@ -5,7 +5,7 @@
         <!-- <button class="close-button" aria-label="Close menu" type="button" data-close>
             <span aria-hidden="true">&times;</span>
         </button> -->
-        <!-- Menu -->
+        <!-- Menu for Mobile -->
         <ul class="vertical menu">
             <li><a href="#">Courses</a></li>
             <li><a href="#">Brokers</a></li>
@@ -50,19 +50,22 @@
         </div>
 
         <!-- Forex title container -->
-        <div class="grid-x grid-padding-x large-padding-collapse">
-            <div class="large-8 large-offset-2 cell">
+        <!--<div class="grid-x grid-padding-x large-padding-collapse">-->
+            <!--<div class="large-8 large-offset-2 cell">-->
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 xlarge-10 xlarge-offset-1 xxlarge-10 xxlarge-offset-1 xxxlarge-8 xxxlarge-offset-2">
                 <div class="forex-text">Forex</div>
             </div>
         </div>
 
         <!-- Trading Courses and breadcrumb container -->
         <div class="grid-container full">
-            <div class="grid-x grid-padding-x large-padding-collapse trading-courses-header">
-                <div class="large-8 large-offset-2 cell">
+            <div class="grid-x grid-padding-x trading-courses-header">
+                <div class="large-12 xlarge-10 xlarge-offset-1 xxlarge-10 xxlarge-offset-1 xxxlarge-8 xxxlarge-offset-2">
+                <!--<div class="large-8 large-offset-2 cell">-->
                     <nav aria-label="You are here:" role="navigation">
                         <ul class="breadcrumbs">
-                            <li><a href="#"><i class="fi-home"></i></a></li>
+                            <li><a href="#"><i class="fi-home"></i>Home</a></li>
                             <li><a href="#">Courses</a></li>
                             <li><a href="#">Forex</a></li>
                         </ul>
@@ -76,7 +79,7 @@
         <!-- Main layout -->
         <div class="grid-container full">
             <div class="grid-x">
-                <div class="cell large-10 large-offset-1 xxlarge-8 xxlarge-offset-2">
+                <div class="cell large-12 xlarge-10 xlarge-offset-1 xxlarge-10 xxlarge-offset-1 xxxlarge-8 xxxlarge-offset-2">
                     <div class="sort-by">Sort by</div>
                     <div class="left">
                         <div class="grid-x">
@@ -133,7 +136,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <div class="grid-x small-up-1 medium-up-2 large-up-3 xlarge-up-3 xlarge-up-4 container">
+                        <div class="grid-x small-up-1 smedium-up-1 medium-up-2 large-up-2 xlarge-up-3 xxlarge-up-4 container">
                             {{> card-course index='01' filters='beginner forex strategy 6h-12h' course-title='Forex Beginners Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
                             {{> card-course index='02' filters='advanced forex course lt-6h' course-title='Forex Advanced Course' course-progress='320% Completed' progress-meter='width: 32%;'}}
                             {{> card-course index='03' filters='advanced binary-options course 12h-18h' course-title='Forex Advanced Course' course-progress='20% Completed' progress-meter='width: 20%;'}}
@@ -160,13 +163,62 @@
             </div>
         </div>
 
-        <!-- Main layout -->
-        <div class="grid-container full">
+        <!-- Footer layout -->
+        <div class="grid-container full footer-container">
             <div class="grid-x">
                 <div class="cell large-10 large-offset-1 xxlarge-8 xxlarge-offset-2">
-                    <div class="footer">
-                        hi!
-                    </div>
+                    <div class="grid-x small-up-1 medium-up-2 large-up-8 xlarge-up-8 xlarge-up-8">
+                        <div class="cell">
+                            Trading Courses
+                        </div>
+                        <div class="cell">
+                            Find a Broker
+                        </div>
+                        <div class="cell">
+                            Signals and AutoTrading
+                        </div>
+                        <div class="cell">
+                            About Us
+                        </div>
+                        <div class="cell">
+                            Contact
+                        </div>
+                        <div class="cell">
+                        </div>
+                        <div class="cell">
+                            <i class="fi-social-twitter"></i>
+                            <i class="fi-social-facebook"></i>
+                        </div>
+                <!--<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"-->
+                <!--width="220" height="220"-->
+                <!--viewBox="0 0 24 24"-->
+                <!--style="fill:#ffffff;">    <path d="M13,7.429V10h3.5L16,13h-3v9H9v-9H7v-3l2.012,0.008V7.436c0-2.857,1.143-4.429,4.429-4.429L17,3v3h-2.571 C13.143,6,13,6.429,13,7.429z"></path></svg>-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFQSURBVGhD7dm9SgNRFMTx+FFYiIL2CoKIheIHioWlD+EjiWUqW1ux1Nrn8BnEUmwE/d/ihuMyu2eLBG4xA79ukj0jFiGZNJhbfOB3hC/cocl8Qh095ADNRR2auUZzUYdmPGSRUYdmPGSRUYdmPGSRUYdmPKQve5jiaYQHnKAbdWhm7kPeoR7Up3wcWUeM6mXmOmQD6iGZI8SoTmauQzahHpLxkMBDVDwEMaqT8RAVD0GM6mT+DVnGJW5GuMIKYpoZUj7/qFKfF8Q0MWQbqpDZRU0TQ3agCpl4hIcgRnUyHlJ5SOAhgYdUHhJ4SOAhlYcEHhJ4SOUhgYcEHlJ5SOAhwWzIFlQhU/4ANWv4geoN2UfMN1RvyBlmeYQq9XlGN+UHTtXt84olxNxDdfu8YRWzlDc8hvqKtOsU3QNqyr+Kek3XOcrXtCqHUK/pugAjJpM/OmbS4JCaMRsAAAAASUVORK5CYII=">-->
+                <!--<img src="https://png.icons8.com/metro/50/000000/high-connection.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEMSURBVGhD7dgxagJBGIbhjaZLYyuIkDpXsPEEFrFLlyKQyiqQlDYSsLfyABIPIGiXHCTnSJW8fzGwDH90GBB+5Hvh6ZZlvmqXaZRSSlXUxyOe/jFFF6GzA37j94R3hG4A7+C5T4RuCO/guS+ETkOipSHR0pBzN8YC9gHzPKP9lQ45xA71A+8gbTOkQg4ZwTtEboWUhpwzDSmgITVpSAENucILPo54QwepkEMm8F6Ys4uBVMgh9k/kvTD3ipSGFNAQDSmgITVpSAENqUlDCmhITRczxP5qvRfmHpC6g/dMbo7UDUruwraoym4D7WbwcMQS12hnl297eM+bNXpod48dvOfNBrdQSikVqab5A+Ui/ziy2ptfAAAAAElFTkSuQmCC">-->
+                <!--<img src="https://png.icons8.com/ios-glyphs/50/000000/high-connection.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEZSURBVGhD7dehSkNhGMbxI4gWQVQMswgGmyCsDBEMJsOCxXswmLyJBWFpYPcOXFhYXLB4Bd7DWDQY9H/CgS+8uqN8+D3K84dfHLxP+nYq55xzSTu4xB0eMMb0C31ItYURXvH+DdeQaR8viA5dRmbIKp4QHdmGzJArRAe2JTNkgujAtiSGrGCB6MDGGx4xxCDQQ/H2EB2fuoV8R4iOTx1CvhNEx6d2Id8pouNTm5DPQ9T6s0Pqf7YHiTav+hm6n9hGkepXODr2p85RpNxDOihSziFzFCvnkBmKlXPIPYqVc8gNirWO+tu8cYHoyFT9GZz+prEGmfyyq+UhanmIWh6iloeo5SFqeYhaHqLWvxlyjOclNuCc+/Wq6gM8f7KGHUdVPAAAAABJRU5ErkJggg==">-->
+                <!--<img src="https://png.icons8.com/material/50/000000/facebook-f.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVGhD7dTtCQJBDITh7cMWtHGrEfsRTcSBI5z7ccmyOZgXBvGP5gG9whhjjDHGGGOJuvxeM9d140N2l12/73KlN+ltemOzp+wte8mygADQm/Q2vbEZINhKkAVghyAYQDfZ7PQ79gCYC4LNBLUAWAgEiwT1ArBQCOYBjQKwKRBsBHQUgHVB/j0pelcDeQH47KEnaCRoCcAWAVoKsHlBI5sCsHl/JrUBsPf/mlYkaAnA5gGlANhGQCkBthroFADbFnRKgE2PPzWAMcYYY4yxTJXyATcoWco+OFG2AAAAAElFTkSuQmCC">-->
+                <!--<img src="https://png.icons8.com/material/50/000000/chevron-down.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADSSURBVGhD7c8xDsIwEETRnICKBnoOyRU4Hw01B4EdJSNFEUnsYHvX0jxpJDdR9g8iIiIiIiJB3W238ekKN+CWQx62j+1t84zBv3EDbsFNWRjBecXMI7jkmJPtZZt/jLWO+RWB4TbcmORq84zZisBtWbxiikZQ65gqEdQqpmoE1Y5pEkG1YppGUOkYlwgqFeMaQf/GhIigozGhIig3JmQEpcaEjqC9mC4iaCummwhai1kudATtxXQRQWsxXUXQMqbLCLrYntPw7tp5moiIiEiSYfgCvcLfk7v/sBgAAAAASUVORK5CYII=">-->
+                <!--<img src="https://png.icons8.com/material/50/000000/expand-arrow.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADXSURBVGhD7c9NCsIwGIThgCt3LvROeiZBD+AZXOl96nHc6aR0QCSVtvn7IvPCEAJZ5HFKKaWUUqpo6+G02qT/bbEOO/c3e+2wB3bqbyNtMI94DbOGIYL/O2LBVtgd40NLmG/EEztgo1nEzEYwS5jFCGYBE41gNTHJEKwGJoTYY9GVxGRDsBKY7AiWE1MMwXJgiiNYSkw1BEuBqY5gMRgzCLYEYw7B5mDMItgUjHkE+4VpBsFCmAvWFIKFMM0hmMfcsKYR7BPTLIJ5zBVrGqGUUkoppf4i5962ta4MW9O7rQAAAABJRU5ErkJggg==">-->
+                <!--<img src="https://png.icons8.com/ios/50/000000/expand-arrow.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIGSURBVGhD7dhNS1RhGIfx6cVKC0MId32DwI+g0KKl65a5cNEmjF5FFDGRFBVrIyJEIBEpUVFWVEgStBGhRR+iD5CrSq9bfGA8/j0vzXkZ4b7gt3Ccc57nHo5nxql5nud5nud5pdeFOfThmD1QcZfxCL27P6WsB7+xvWcBx1FV1/AHYT+3kFh0iOAJTqDs+vEP0f3EDtMNNUSwhDKHuQ41RHATB7IN/oI6oN5znETR3UDcEOYvLmFfZ2G/UAdEreAUiuo21LrKFRzoAdSTldcoYpj7UOspa5CXut1mZ6EOUt7hDPJqBGodZR12FcU2DXWw8gFtaLQsV8NXJA4RmoI6ifIZjQzzEOq8il1OmdeahDqZYq/SOWTJLuUZqPMpX/DfL1iWV+sb2pEmG+Ix1HmUhoYITUCdXPmO84jLhpiHOl75hDz+Dncbh1pE2UAHVHa7XIQ6TvmI3IYIZbmzbOIC6rMhnkI9X7E7YisKaQxqUeUHOmHZEM+gnqfYEHm+R8lGoRZXfuIiXtQ9luQ9Ch8iNAy1CWVLPHaYVZxGqWUZJo23KPLDaGxDUJvKqtIhQoNQm0vrDSofInQPapNJXqFphgjdhdrsYV6i6YYI3YHadFRTDxGybzjU5oOi/1XONfuGQw2xjBYcqQZQP4S9u5fxDUwhXYV9brL/x4/sEJ7neZ7nlVuttgMcDctwX0jEvwAAAABJRU5ErkJggg==">-->
+                <!--<img src="https://png.icons8.com/metro/50/000000/expand-arrow.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVGhD7c8xCsIwGMXxOjo6uDkIot7DzckTOIm38BYu3kO8kU6OLk7qi/WBSJCSNl8SeD94kHZo869EREREROSjj03qYzJDbFofw4yxK/bE9lgPs7bEbpi7w8a9CLHG3Ae4A2YZ4yLuGP9/woIMsDOWIuY34oGtsGAz7IJZxvgitlhrljHRIsgiJnoExYwxi6AYMeYR1GVMsgjqIiZ5BLWJySaCQmKyi6A51jQm2whqEpN9BP2LKSaCfDFHrKgI8sUUF0G+mOIi6Dum2AgaYTts8X4SERERERGhqnoBhS2f+5+qmnIAAAAASUVORK5CYII=">-->
+                <!--<img src="https://png.icons8.com/ios-glyphs/50/000000/expand-arrow.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGrSURBVGhD7Zg9LwRhFEYHCYmCRKfS0eiVejr+gNo/oOQfqJUq21GoKPUaSo1SopEoCJ4jJplc78wwe+dDck9ykv1433uf7BZPdrMgCIIgCIIgaMK8vJCrX8+GBZnIRsZKpuWl/JBPcl0OBbKQiWxkJGuSCXkiOZj7Irdk35CBLMVsZCXzD2bllSwexje5K/uC3WSwuchK5iQz8lTaS3ggk59AS7CLnaksZCRrJZPySKYGHMsp2TbsYFcqA9nI+Gv25Lu0g85k6VfqALPZYfeShUyN2JGv0g69lgvSG2Yy2+4jA1nGYkM+Szv8Vi5JL5jFTLuH3WRwYU0+SrvkQXoUJzOYZeezk92uLMt7aZeNW5zFoivKLna2wqK8kXYpZbUt/wp3bNEhO9jVKnPSozirio4dnUAZjaQNgYeyqjh5jzOpu8ysLTpvmhSna9F5sy9TxXkui8XJY16z57jLjEFQV5ytFp03mzJVnHff2tc5y51BUlac1laKzpsVmSrOXN7jzL+grDg7KTpv+IOgWJw8rv3TYKjkxdlL0XlDCXbxqzIIgiAIgiAIqsiyT+gb5/Nok6Q/AAAAAElFTkSuQmCC">-->
+                <!--<img src="https://png.icons8.com/android/50/000000/expand-arrow.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADSSURBVGhD7c8xDsIwEETRnICKBnoOyRU4Hw01B4EdJSNFEUnsYHvX0jxpJDdR9g8iIiIiIiJB3W238ekKN+CWQx62j+1t84zBv3EDbsFNWRjBecXMI7jkmJPtZZt/jLWO+RWB4TbcmORq84zZisBtWbxiikZQ65gqEdQqpmoE1Y5pEkG1YppGUOkYlwgqFeMaQf/GhIigozGhIig3JmQEpcaEjqC9mC4iaCummwhai1kudATtxXQRQWsxXUXQMqbLCLrYntPw7tp5moiIiEiSYfgCvcLfk7v/sBgAAAAASUVORK5CYII=">-->
+                <!--<img src="https://png.icons8.com/material/50/000000/expand-arrow.png">-->
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHgSURBVGhD7dXNS1RhGIbxETMzRclSQkGihRC4tL/FhRs3LQpatUhsE4KCbmyhkEGCCAoFIagUEWIfUFAICn2AIAgR7vwH+vC6dQ7cDEYz48ycEzwX/BhH55zzPnLOO7koiqIoiqKo5l3Pv2al/vxrSU3gJ4aO3qXfCH7j1tG7IhvGn7xfuIE0u49kPRpmAEXVh334wTeRRmNI1iFf0YWiu4Yf8GFuo5ZNwof4jMsouV58hw9zB9WuDlPwIbbQgbK7ij34Se+iWmmIafj1NnERp+4KduEnv4dKpyEewq/zERdQsXqwA7/IKCpVPR7Dz/8ebah43fgGv9g4TpuGmIef9y1aUbW0a3yBX1S7S7lpiEX4+TbQgqrXiW34xR9A93gpNeAp/DyvcB416xK0m/gitNsUO8xZPIMf/wJNqHnt+ARfzCz+NYyGWIEft4pGpJZ2lQ/wRWn30b1/UufwHP75ZWi41NPu8g6+OO1ChcPo3n8J/5yekUwMkaRd5jV8kdqNkmGasQ7/+xLOIHPpP65dxxf7BHqW3tjvZAF/u/0ykYbR7uOLPih4P4dMD5Gk3WcNvvjEI5T6fZNqeoC1G/kQM/ivhkjSMMk3dznf/JlKz8Lg8Y9RFEVRFEVRFEUF5XKHmWym+gDAgTYAAAAASUVORK5CYII=">-->
+                <!--<img src="https://png.icons8.com/small/50/000000/expand-arrow.png">-->
+
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVGhD7dTBSQNBGMXxBRFERU9pIRXYgGAfHvQo9hBIDzmnhBSgNxsRLMGTEH0f4cEiM5toZub7Bt4PHizDLuyfhR1EREREpKlr7Gx3GdIMO91d5j1jX9gndm8HgZxjG+wbe8fmWNIJZgF2o22LPWIRWMQrxnezrbCsD2x8s8U8YJ5SEbYFlnWLjb+KzTMmF/GGXWCT7rAIMVMR9kM6iHdMkQjyiikaQa1jqkRQq5iqEVQ7pkkE1YppGkGlY1wiqFSMawQdGxMigv4bYxEv2Pg5m0sE/TUmZAQdGhM6gvbFTEVcYaHkYp6wbiIoFZNa6AjaF9NFBOViuoqg3zFdRtANtsaW2KUdiIiIiIg4GYYf677pTyl92VwAAAAASUVORK5CYII=">-->
+                <!--<img src="https://png.icons8.com/ios/50/000000/expand-arrow-filled.png">-->
+            </div>
                 </div>
             </div>
         </div>

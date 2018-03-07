@@ -1,15 +1,45 @@
 @charset 'utf-8';
 
+// Global font
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,700,800,900|Roboto:400,500,700,900');
+
+@import 'foundation';
+@import 'motion-ui';
+
 @import 'settings';
 
 
 // 1. Custom Global
 // ---------
-$custom-font-color: #37474f;
-$custom-border-color: #c5c5c5;
+$custom-font-color: #6c6c6c;
+$custom-font-color-darker: #37474F;
+$custom-border-color: #B2B2B2;
 $custom-arrow-color: #3c4c53;
 $investoo-secondary-color: #52c3aa;
 $custom-topbar-bg: #37474f;
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+        small: 0,
+        smedium: 480px,
+        medium: 640px,
+        large: 1024px,
+        xlarge: 1200px,
+        xxlarge: 1440px,
+        xxxlarge: 1640px
+        //small: 0,
+        //smedium: 480px,
+        //medium: 600px,
+        //large: 768px,
+        //xlarge: 960px,
+        //xxlarge: 1220px,
+        //xxxlarge: 1440px,
+        //xxxxlarge: 1640px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small smedium medium large xlarge xxlarge xxxlarge);
 
 // 10. Breadcrumbs
 // ---------------
@@ -38,10 +68,10 @@ $dropdown-menu-item-color-active: $custom-font-color;
 // 25. Off-canvas
 // --------------
 $offcanvas-sizes: (
-  small: 250px,
+        small: 250px,
 );
 $offcanvas-vertical-sizes: (
-  small: 250px,
+        small: 250px,
 );
 $offcanvas-background: $custom-topbar-bg;
 
@@ -56,13 +86,6 @@ $topbar-background: $custom-topbar-bg;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-unstack-breakpoint: medium;
-
-
-// Global font
-@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,700,800,900|Roboto:400,500,700,900');
-
-@import 'foundation';
-@import 'motion-ui';
 
 @include foundation-global-styles;
 @include foundation-grid;

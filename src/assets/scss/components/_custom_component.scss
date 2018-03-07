@@ -1,5 +1,18 @@
 // Mixins
 
+.hinge-out-from-right.mui-leave {
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  -webkit-transform: perspective(2000px) rotate(0deg);
+          transform: perspective(2000px) rotate(0deg);
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  opacity: 1; }
+
 // Cross browser border radius mixin
 @mixin border-radius($radius) {
 	border-radius: $radius;
@@ -28,10 +41,11 @@
 }
 @mixin investoo-links {
     &, &:hover, &:focus, &:active, &:visited {
-        font-size: 18px;
+        font-size: 20px;
         color: $white;
         position: relative;
-        top: 26px;
+        top: 22px;
+        font-weight: 500;
     }
 }
 // Global styles
@@ -39,7 +53,6 @@ body {
     // font-family: 'Heebo', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
-
 
 // Top bar
 .top-bar .top-bar-right {
@@ -73,6 +86,9 @@ body {
             float: left;
             margin-right: 4px;
             font-weight: bold;
+            padding-left: 1px;
+            padding-right: 0px;
+            width: 21px;
             @include border-radius(2px);
             background-color: $investoo-secondary-color;
             &:before {
@@ -118,7 +134,8 @@ body {
             margin-right: 4px;
             font-weight: bold;
             position: relative;
-            top: 4px;
+            top: 5px;
+            padding-left: 3px;
             @include border-radius(2px);
             background-color: $investoo-secondary-color;
             &:before {
@@ -147,6 +164,7 @@ body {
 #offCanvasLeft {
     & li a {
         @include investoo-links;
+        width: 80%;
     }
 }
 
@@ -154,21 +172,55 @@ body {
 .forex-text {
     color: #52c3aa;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 15px;
     margin-bottom: 15px;
+    @include breakpoint(small only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(smedium only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(medium only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(large only) {
+        padding-left: 10px;
+    }
 }
 .trading-courses-header {
     background: #52c3aa;
     padding-top: 20px;
-    .breadcrumbs li {
-        &::after {
-            font-size: 20px;
-        }
-        & a {
-            font-size: 20px;
-            &::first-letter {
-                font-size: 24px;
+    @include breakpoint(small only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(smedium only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(medium only) {
+        padding-left: 10px;
+    }
+    @include breakpoint(large only) {
+        padding-left: 10px;
+    }
+    .breadcrumbs {
+        margin-bottom: 0px;
+        li {
+            &::after {
+                font-size: 20px;
+            }
+            & a {
+                font-size: 20px;
+                &::first-letter {
+                    font-size: 24px;
+                }
+                .fi-home {
+                    font-size: 25px;
+                    float: left;
+                    position: relative;
+                    top: -7px;
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -186,15 +238,15 @@ body {
 
 // Sort by text
 .sort-by {
-    margin-top: 40px;
-    @include breakpoint(medium only) {
+    margin-top: 78px;
+    font-size: 23px;
+    color: #7D7D7D;
+    margin-bottom: 10px;
+    @include breakpoint(small smedium medium large) {
         padding-left: 10px;
     }
-    @include breakpoint(smedium only) {
-        padding-left: 10px;
-    }
-    @include breakpoint(small only) {
-        padding-left: 10px;
+    @include breakpoint(xlarge xxlarge) {
+        padding-left: 0px;
     }
 }
 
@@ -203,17 +255,35 @@ body {
 .left {
     width: 20%;
     float: left;
-    @include breakpoint(medium only) {
-        width: 30%;
-        padding-left: 10px;
-    }
-    @include breakpoint(smedium only) {
-        width: 40%;
-        padding-left: 10px;
-    }
     @include breakpoint(small only) {
         width: 100%;
         padding-left: 10px;
+        //background-color: rgba(217, 0, 1, 0.15) !important;
+    }
+    @include breakpoint(smedium only) {
+        width: 50%;
+        padding-left: 10px;
+        //background-color: rgba(178, 178, 178, 0.73) !important;
+    }
+    @include breakpoint(medium only) {
+        width: 33.333%;
+        padding-left: 10px;
+        //background-color: rgba(217, 180, 11, 0.38) !important;
+    }
+    @include breakpoint(large only) {
+        width: 33.333%;
+        padding-left: 10px;
+        //background-color: rgba(15, 18, 217, 0.51) !important;
+    }
+    @include breakpoint(xlarge only) {
+        width: 25%;
+        //padding-left: 10px;
+        //background-color: rgba(144, 195, 120, 0.66) !important;
+    }
+    @include breakpoint(xxlarge only) {
+        width: 20%;
+        //padding-left: 10px;
+        //background-color: rgba(217, 0, 173, 0.75) !important;
     }
 }
 
@@ -225,35 +295,75 @@ body {
     .filterable {
         padding: 0px 10px 0px 10px;
     }
-    @include breakpoint(medium only) {
-        width: 70%;
-    }
-    @include breakpoint(smedium only) {
-        width: 60%;
-    }
     @include breakpoint(small only) {
         width: 100%;
+        //padding-left: 10px;
+    }
+    @include breakpoint(smedium only) {
+        width: 50%;
+        //padding-left: 10px;
+    }
+    @include breakpoint(medium only) {
+        width: 66.666%;
+        //padding-left: 10px;
+    }
+    @include breakpoint(large only) {
+        width: 66.666%;
+        //padding-left: 10px;
+    }
+    @include breakpoint(xlarge only) {
+        width: 70%;
+        //padding-left: 10px;
+    }
+    @include breakpoint(xxlarge only) {
+        width: 80%;
+        //padding-left: 10px;
     }
 }
 
+//body {
+//    @include breakpoint(small only) {
+//        background-color: rgba(217, 0, 1, 0.15) !important;
+//    }
+//    @include breakpoint(smedium only) {
+//        background-color: rgba(178, 178, 178, 0.73) !important;
+//    }
+//    @include breakpoint(medium only) {
+//        background-color: rgba(217, 180, 11, 0.38) !important;
+//    }
+//    @include breakpoint(large only) {
+//        background-color: rgba(15, 18, 217, 0.51) !important;
+//    }
+//    @include breakpoint(xlarge only) {
+//        background-color: rgba(144, 195, 120, 0.66) !important;
+//    }
+//    @include breakpoint(xxlarge) {
+//        background-color: rgba(217, 0, 173, 0.75) !important;
+//    }
+//}
 
 // Filter block
 .filter-container {
     padding: 0px 10px 0px 0px;
-    height: 310px;
+    height: 384px;
     margin-bottom: 20px;
     margin-right: 10px;
     border: 1px solid $custom-border-color;
     @include border-radius(4px);
     @include box-shadow(0px, 2px, 4px, 0px, rgba(50, 50, 50, 0.75));
     .filter-item {
-        padding: 35px 0px 0px 10px;
+        padding: 38px 8px 0px 16px;
+        //@include breakpoint (medium only){
+        //    padding: 24px 8px 0px 16px;
+        //}
+        color: #7D7D7D;
         &:last-child {
             padding-bottom: 35px;
         }
         &>li {
             border: 1px solid $custom-border-color;
             width: 100%;
+
             @include border-radius(2px);
             .is-dropdown-submenu {
                 width: 100%;
@@ -261,6 +371,10 @@ body {
         }
         li a {
             color: $custom-font-color;
+            font-size: 20px;
+            color: #7D7D7D;
+            font-size: 20px;
+            padding: 14px 14px 12px 14px;
         }
     }
 }
@@ -268,11 +382,11 @@ body {
 
 // Cards styles
 .card.course {
-    height: 310px;
+    height: 384px;
     @include border-radius(4px);
     @include box-shadow(0px, 2px, 4px, 0px, rgba(50, 50, 50, 0.75));
     .card-img {
-        max-height: 120px;
+        max-height: 146px;
         overflow: hidden;
         img {
             width: 100%;
@@ -281,26 +395,29 @@ body {
         }
     }
     .card-section {
-        height: 80px;
+        height: 184px;
         padding: 10px;
         .course-title {
             float: left;
-            font-size: 17px;
+            font-size: 22px;
             font-weight: 500;
             margin-top: 10px;
             width: 100%;
+            color: $custom-font-color-darker;
         }
         .course-progress {
             float: left;
-            font-size: 12px;
-            margin-top: 10px;
+            font-size: 14px;
+            margin-top: 14px;
             width: 100%;
+            color: $custom-font-color;
         }
         .user-rating {
             float: left;
-            font-size: 12px;
-            margin-top: 0px;
+            font-size: 14px;
+            margin-top: 10px;
             width: 100%;
+            color: $custom-font-color;
         }
         .rate {
             width: 100%;
@@ -325,14 +442,15 @@ body {
         }
     }
     .card-footer {
-        height: 40px;
+        height: 54px;
         width: 100%;
         float: left;
         background: $investoo-secondary-color;
         color: white;
         font-weight: bolder;
         text-align: center;
-        line-height: 42px;
+        line-height: 58px;
+        font-size: 18px;
     }
 }
 
@@ -360,3 +478,22 @@ body {
         fill: transparent;
     }
 }
+
+
+// Footer
+.footer-container {
+    background-color: $custom-topbar-bg;
+    color: white;
+    .fi-social-facebook {
+        color: white;
+        font-size: 100px;
+        //color: $custom-topbar-bg;
+    }
+    .fi-social-twitter {
+        background-color: $custom-topbar-bg;
+        font-size: 100px;
+        color: white;
+    }
+}
+
+
