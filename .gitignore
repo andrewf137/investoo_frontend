@@ -8,3 +8,4 @@ dist
 *.sublime-workspace
 package-lock.json
 .idea
+notes.txt
