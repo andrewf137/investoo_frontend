@@ -1,4 +1,4 @@
-# [Investoo Group Frontend Test]
+# Investoo Group Frontend Test
 
 This is a small project to show the use of Foundation 6.4.
 The main features are:
@@ -50,7 +50,7 @@ Html:
 
 ## Installation
 
-To use this template, your computer needs:
+First, to use this project, your computer needs:
 
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
 - [Git](https://git-scm.com/)
@@ -75,7 +75,7 @@ cd investoo_frontend
 npm install
 ```
 
-- Run gulp:`
+- Run gulp:
 
 ```bash
 gulp
