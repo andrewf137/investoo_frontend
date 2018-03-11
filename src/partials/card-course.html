@@ -1,5 +1,5 @@
 <div class="cell filterable {{filters}}">
-    <div class="card course" data-toggle="course-information-{{index}}">
+    <div class="card course" id="course-{{index}}" data-toggle="course-details-{{index}}">
         <div class="card-img">
             <img src="http://via.placeholder.com/360x180" />
         </div>
@@ -17,6 +17,22 @@
         </div>
         <div class="card-footer">
             Start Free Course
+        </div>
+    </div>
+    <!-- Popup with course details -->
+    <div class="course-details dropdown-pane" data-card-id="course-{{index}}" id="course-details-{{index}}" data-dropdown>
+        <div class="title">
+            Forex Beginners Course
+        </div>
+        <div class="contents">
+            <div class="modules">Modules: 2</div>
+            <div class="lessons">Video Lessons: 10</div>
+        </div>
+        <div class="description">
+            Introduction to the world of Forex trading markets, how to et up an account, terminology and how to prepare for your first trade
+        </div>
+        <div class="free-access">
+            <button class="button" type="button">Free Access</button>
         </div>
     </div>
 </div>

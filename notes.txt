@@ -89,9 +89,21 @@ $breakpoints: (
   xxlarge: 1440px,
 );
 $breakpoint-classes: (small smedium medium large xlarge xxlarge);
-Added two new plugins:
+Added three new plugins:
 Isotope
 jQueryBridget
+fontawesome
+
+Use of panini passing variables to partials
 
 
 
+
+
+    "isotope-cells-by-column": "^1.1.4",
+    "isotope-cells-by-row": "^1.1.4",
+    "isotope-fit-columns": "^1.1.4",
+    "isotope-horizontal": "^2.0.1",
+    "isotope-layout": "^3.0.5",
+    "isotope-masonry-horizontal": "^2.0.1",
+    "isotope-packery": "^2.0.1",
